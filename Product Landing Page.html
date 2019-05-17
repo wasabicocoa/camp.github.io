@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<title>Product Landing Page</title>
+  <style>
+      /*--------------
+      --scroll-to-top
+      ---------------*/
+      .scrolltop {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        left: auto;
+        right: 20px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1040;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolltop:hover {
+        cursor: pointer;
+      }
+      .scroll-fade {
+        opacity: 1;
+        visibility: visible;
+      }
+      .scroll-icon {
+        background-color: var(--darkish);
+        padding: 5px 15px;
+        border-radius: 50%;
+      }
+      .scroll-icon .fa-angle-up {
+        color: var(--light);
+      }
+      /*-----------------------*/
+
+      /*-----page styles-------*/
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .container {
+          max-width: calc(1600px + 10%);
+          margin: 0 auto;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+      }
+
+  </style>
+</head>
+<body>
+  <!-- Scroll-Top -->
+  <div class='scrolltop' id="scroll-top">
+      <div class='scroll-icon'><a onclick="clickScroll()"><i class="fa fa-4x fa-angle-up"></i></a></div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Top</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Video</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Product Deets</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <main class="container">
+      
+
+ 
+      <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hAPAxJoWl4U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+  <script>
+    var scrollTop = document.getElementById("scroll-top");
+
+    window.onscroll = function() {
+        scroll();
+      };
+
+    function scroll() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        scrollTop.classList.add("scroll-fade");
+      } else {
+        scrollTop.classList.remove("scroll-fade");
+      }
+    }
+ 
+    function clickScroll () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
